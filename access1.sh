@@ -1,0 +1,10 @@
+echo -n "enter the filename"
+read filename
+echo "the file entered is $filename"
+[ -w $filename ] && W="Write =yes" || W="Write =no"
+echo "$filename permission is"
+echo "$W"
+[ -r $filename ] && R="Read =yes" || R="Read =no"
+echo "$R"
+[ -x $filename ] && X="Execute =yes" || X="Execute =no"
+echo "$X"
